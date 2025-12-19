@@ -9,11 +9,11 @@
 ![Создание Dockerfile](https://github.com/AltynLatypovaPI431/hello-docker/blob/master/skrin/dockerfile.png?raw=true)
 
 Запустила докер контейнер на порте 1234 
-![Запуск контейнера](scrin/dockerbuild.png)
-![Работа приложения](scrin/localhost1.png)
+![Запуск контейнера](https://github.com/AltynLatypovaPI431/hello-docker/blob/master/skrin/docker%20build.png?raw=true)
+![Работа приложения](https://github.com/AltynLatypovaPI431/hello-docker/blob/master/skrin/localhost1.png?raw=true)
 
 Написала docker-compose.yml для развертывания этого приложения вместе с базой данных PostgreSQL, предусмотрела проброс порта 1234, а также возможность расширения или подключения сторонних сервисов при необходимости.
-![Docker-compose файл](scrin/docker compose.png)
+![Docker-compose файл]([scrin/docker compose.png](https://github.com/AltynLatypovaPI431/hello-docker/blob/master/skrin/docker%20compose.png?raw=true))
 
 Запустила стек через docker-compose и убедилась что подключение к базе данных произошло успешно.
-![Работа приложения](scrin/localhost.png)
+![Работа приложения](https://github.com/AltynLatypovaPI431/hello-docker/blob/master/skrin/localhost.png?raw=true)
