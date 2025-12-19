@@ -6,7 +6,7 @@
 ## Ход работы
 
 Клонировала репозиторий данный преподавателем. Создала и заполнила файл Dockerfile image
-![Создание Dockerfile](https://github.com/AltynLatypovaPI431/hello-docker/blob/master/skrin/docker%20build.png?raw=true)
+![Создание Dockerfile](https://github.com/AltynLatypovaPI431/hello-docker/blob/master/skrin/dockerfile.png?raw=true)
 
 Запустила докер контейнер на порте 1234 
 ![Запуск контейнера](scrin/dockerbuild.png)
