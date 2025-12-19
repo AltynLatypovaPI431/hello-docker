@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  # Веб-приложение
+  web:
+    build: .
+    container_name: lab-web-app
+    ports:
+      - "1234:1234"  # проброс порта 1234
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_DB: testdb
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+      APP_PORT: 1234
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # База данных PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: lab-postgres-db
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - app-network
+
+# VOLUME - создаёт точку монтирования для постоянного хранения
+volumes:
+  postgres_data:
+
+# Сеть для связи контейнеров
+networks:
+  app-network:
+    driver: bridge
